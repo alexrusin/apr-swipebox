@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-10-28 11:17-0700\n"
+"PO-Revision-Date: 2016-10-28 11:50-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: apr-swipebox.php:78
+msgid "Settings"
+msgstr "Настройки"
+
+#: settings-page.php:6
+msgid "APR Swipebox Plugin"
+msgstr "Плагин APR Swipebox"
+
+#: settings-page.php:7
+msgid "Settings page for the plugin"
+msgstr "Страница настроек плагина"
+
+#: settings-page.php:17
+msgid "Save Options"
+msgstr "Сохранить настройки"
+
+#: settings-page.php:25
+msgid "APR Swipebox"
+msgstr "APR Swipebox"
+
+#: settings-page.php:25
+msgid "APR Swipebox Settings"
+msgstr "Настройки APR Swipebox"
+
+#: settings-page.php:54
+msgid "Delay before hiding bars on desktop (ms)"
+msgstr "Задержка до сокрытия баров на рабочем столе (мс)"
+
+#: settings-page.php:62
+msgid "Note: 0 delay will keep the bars permanently"
+msgstr "Внимание: задержка равная 0 будет отображать бары поcтоянно"
+
+#: settings-page.php:67
+msgid "Video max width (px)"
+msgstr "Максимальная ширина видео (в пикселях)"
+
+#: settings-page.php:80
+msgid "Hide \"Close\" button on mobile?"
+msgstr "Скрыть кнопку \"Закрыть\" на мобильных устройствах"
+
+#: settings-page.php:88 settings-page.php:101
+msgid "No"
+msgstr "Нет"
+
+#: settings-page.php:89 settings-page.php:102
+msgid "Yes"
+msgstr "Да"
+
+#: settings-page.php:93
+msgid "Show top bar on mobile devices?"
+msgstr "Показать верхнюю панель на мобильных устройствах?"
+
+#: settings-page.php:115
+msgid "Delay before hiding bars should be greater or equal to 0"
+msgstr "Задержка должна быть больше или равна нулю"
+
+#: settings-page.php:116
+msgid "Video max width should be greater than 0"
+msgstr "Ширина видео должна быть больше 0"
+
+#~ msgid "Delay before hiding bars should be greater than 0"
+#~ msgstr "Задержка должна быть больше или равна 0"
+
+#~ msgid "Delay in ms before the bars are hidden on the desktop"
+#~ msgstr "Задержка до сокрытия баров на рабочем столе (мс)"
+
+#~ msgid "Maximum width of the video in pixels"
+#~ msgstr "Максимальная ширина видео в пикселях"

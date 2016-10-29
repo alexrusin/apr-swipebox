@@ -1,0 +1,1 @@
+A simple plugin that integrates JQuery Swipebox into WordPress.  It has a settings page, internationalized and translated into Russian language.
