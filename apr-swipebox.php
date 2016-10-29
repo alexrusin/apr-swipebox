@@ -2,10 +2,10 @@
 /*
   Plugin Name: APR Swipebox
   Plugin URI: http://alexrusin.com
-  Description: A simple plugin that integrates JQuery Swipebox plugin into WordPress.
+  Description: A simple plugin that integrates jQuery Swipebox into WordPress.
   Version: 0.1
   Author: Alex Rusin
-  Author URI: http://alexrusin.com
+  Author URI: http://alexrusin.com/swipebox-plugin-for-wordpress/
   License: GPL2
   Text Domain: apr-swipebox
  */
@@ -37,11 +37,6 @@ function apr_load_textdomain() {
 }
 add_action( 'init', 'apr_load_textdomain' );
 
-
-
-
-
-
 function apr_swipe_enqueue_scripts(){
 	wp_enqueue_style( 'apr-swipebox-css', plugins_url( 'src/css/swipebox.min.css', __FILE__ ) );
 	wp_enqueue_script( 'apr-swipebox', plugin_dir_url( __FILE__ ) . 'src/js/jquery.swipebox.min.js', array('jquery'), '10262016', true );
@@ -65,7 +60,7 @@ function apr_swipe_enqueue_scripts(){
                 'top_bar'  => true
              );
         }
-    wp_localize_script('apr-swipebox-controls', 'SWIPE_CONTROLS', $swipebox_options);
+  wp_localize_script('apr-swipebox-controls', 'SWIPE_CONTROLS', $swipebox_options);
 }
 
 add_action('wp_enqueue_scripts','apr_swipe_enqueue_scripts' );

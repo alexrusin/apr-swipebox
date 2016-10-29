@@ -38,13 +38,10 @@ function apr_swipebox_do_options() {
 	
 	$options = get_option('apr_swipebox');
 	
-	
 	if (gettype($options)!='array'){
 		$options=array();
 	}
-
-
-	ob_start();
+	
 	?>
 		<tr valign="top"><th scope="row"><?php _e( 'Delay before hiding bars on desktop (ms)', 'apr-swipebox' ); ?></th>
 			<td>
@@ -55,8 +52,6 @@ function apr_swipebox_do_options() {
 				?>
 				<input type="number" id="delay_time" name="apr_swipebox[delay_time]" width="30" value="<?php echo esc_html($options['delay_time']); ?>" /><br />
 				<label class="description" for="apr_swipebox[delay_time]"><?php _e( 'Note: 0 delay will keep the bars permanently', 'apr-swipebox' ); ?></label>
-
-
 			</td>
 		</tr>
 		<tr valign="top"><th scope="row"><?php _e( 'Video max width (px)', 'apr-swipebox' ); ?></th>
@@ -68,8 +63,6 @@ function apr_swipebox_do_options() {
 				?>
 				<input type="number" id="video_max_width" name="apr_swipebox[video_max_width]" width="30" value="<?php echo esc_html($options['video_max_width']); ?>" /><br />
 
-				
-				
 			</td>
 		</tr>
 		<tr valign="top"><th scope="row"><?php _e('Hide "Close" button on mobile?', 'apr-swipebox');?></th>
@@ -102,7 +95,7 @@ function apr_swipebox_do_options() {
 }
 
 function apr_validate_input($input){
-	
+	ob_start();
 	$input['delay_time'] = (int)$input['delay_time'];
 	$input['video_max_width'] = (int)$input['video_max_width'];
 
@@ -111,6 +104,13 @@ function apr_validate_input($input){
     $error_message_video = __( 'Video max width should be greater than 0', 'apr-swipebox' );
 
     $options = get_option('apr_swipebox');
+    if (gettype($options)!='array'){
+		$options=array(
+			'delay_time' => 0,
+			'video_max_width' => 1140
+			);
+
+	}
 
 	if ($input['delay_time'] < 0){
 		
@@ -120,7 +120,7 @@ function apr_validate_input($input){
         $error_message_delay,
         $type
     );
-		$input['delay_time'] = $options[delay_time];
+		$input['delay_time'] = $options['delay_time'];
 	}
 
 	if ($input['video_max_width'] < 0){
@@ -130,11 +130,12 @@ function apr_validate_input($input){
         $error_message_video,
         $type
     );
-		$input['video_max_width'] = $options[video_max_width];
+		$input['video_max_width'] = $options['video_max_width'];
 		
 	}
 
 	return $input;
+	ob_end_flush();
 
 }
 

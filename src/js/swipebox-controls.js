@@ -1,7 +1,8 @@
 (function($) {
 	$(document).ready(function() {
-		//add swipebox class to image links
-		$('a[href*=".png"], a[href*=".gif"], a[href*=".jpg"], a[href*=".JPG"]').addClass('swipebox');
+		//add swipebox class to image youtube, and vimeo links
+		$('a[href*=".png"], a[href*=".gif"], a[href*=".jpg"], a[href*=".JPG"], a[href*="youtube"], a[href*="vimeo"]').addClass('swipebox');
+		
 		//add swipebox to images with swipebox class
 		$( '.swipebox' ).swipebox( {
 		useCSS : true, // false will force the use of jQuery for animations
